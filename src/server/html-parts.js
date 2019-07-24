@@ -1,0 +1,55 @@
+export const htmlFirst = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/e83af1d552.js"></script>
+  
+  <style>
+    html, body {
+      height: 100%;
+    }
+  </style>
+
+  <title>InfoMeter</title>
+</head>
+<body>
+  <article class="h-100 d-flex flex-column justify-content-between">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="/">InfoMeter</a>
+        <a class="text-info" target="blank" href="https://twitter.com/AntonCodes" title="@AntonCodes">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </nav>
+
+    <main class="container py-3">
+      <div class="row text-center">
+        <div class="col-12 col-md-10 col-lg-8 mx-auto">
+
+          <div id="root">`;
+
+
+export const htmlLast = `</div>
+
+</div>
+</div>
+</main>
+
+<section class="clearfix"></section>
+
+<footer class="container d-flex flex-wrap justify-content-between pb-2">
+<a class="text-info text-nowrap pr-3" href="/terms-of-service">Terms of Service</a>
+<span class="text-secondary text-nowrap">© 2019 Anton Bahurinsky</span>
+</footer>
+</article>
+
+</body>
+</html>`;

@@ -1,0 +1,29 @@
+{
+  "name": "infometer-ssr",
+  "version": "0.1.0",
+  "description": "InfoMeter (with server side rendering).",
+  "main": "./dist/server/index.js",
+  "scripts": {
+    "build": "babel ./src --out-dir ./dist",
+    "start": "node ./dist/server/index.js",
+    "serve": "nodemon --exec babel-node ./src/server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "npm run build"
+  },
+  "keywords": [],
+  "author": "Anton Bahurinsky",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
