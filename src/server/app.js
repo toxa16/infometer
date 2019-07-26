@@ -4,9 +4,9 @@ import ReactDOMServer from 'react-dom/server';
 
 import { htmlFirst, htmlLast } from './html-parts';
 
-import Homepage from '../app/Homepage';
-import ResultPage from '../app/ResultPage';
-import TermsOfService from '../app/TermsOfService';
+import Homepage from '../components/Homepage';
+import ResultPage from '../components/ResultPage';
+import TermsOfService from '../components/TermsOfService';
 
 const app = express();
 
