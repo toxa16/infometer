@@ -32,14 +32,10 @@ export const htmlFirst = `<!DOCTYPE html>
 
     <main class="container py-3">
       <div class="row text-center">
-        <div class="col-12 col-md-10 col-lg-8 mx-auto">
-
-          <div id="root">`;
+        <div class="col-12 col-md-10 col-lg-8 mx-auto">`;
 
 
 export const htmlLast = `</div>
-
-</div>
 </div>
 </main>
 

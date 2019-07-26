@@ -4,4 +4,4 @@ import ReactDOM from 'react-dom';
 import App from '../components/App';
 
 const root = document.getElementById('root');
-ReactDOM.hydrate(<App />, root);
+root && ReactDOM.hydrate(<App />, root);
