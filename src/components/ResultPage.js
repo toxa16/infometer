@@ -1,4 +1,5 @@
 import React from 'react';
+import qs from 'query-string';
 
 function randomWithSeed(seedStr) {
   const str = seedStr.toLowerCase();
@@ -13,16 +14,17 @@ function randomWithSeed(seedStr) {
 }
 
 export default function ResultPage(props) {
-  const raw = props.location.search || props.location.pathname;
-  //console.log(raw);
+  const search = props.location.search || props.location.pathname;
+  const params = qs.parseUrl(search);
+  const q = params.query.q;
 
   return (
     <div>
       <p className="h3">Your info is</p>
       <p className="font-weight-bold text-info display-1">
-        { `randomWithSeed(q)` }%
+        { randomWithSeed(q) }%
       </p>
-      <p className="text-muted pb-5">"{ `q` }"</p>
+      <p className="text-muted pb-5">"{ q }"</p>
       <div>
         <a className="text-info" href="/">Try another info</a>
       </div>
