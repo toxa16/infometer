@@ -1,5 +1,4 @@
 import path from 'path';
-import { Url } from 'url';
 import express from 'express';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
@@ -26,7 +25,6 @@ app.get('/result', (req, res, next) => {
   if (!q) {
     res.redirect('/');
   } else {
-    //req.page = <ResultPage q={ q } />;
     req.page = <ServerLocation url={ req.url }>
       <App />
     </ServerLocation>;
