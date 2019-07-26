@@ -11,6 +11,8 @@ export const htmlFirst = `<!DOCTYPE html>
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/e83af1d552.js"></script>
   
+  <link rel="stylesheet" href="./styles/imc.css">
+
   <style>
     html, body {
       height: 100%;

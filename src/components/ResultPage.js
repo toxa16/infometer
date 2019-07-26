@@ -43,9 +43,11 @@ export default function ResultPage(props) {
   return (
     <div>
       <p className="h3">Your info is</p>
-      <p className="font-weight-bold text-info display-1">
-        <noscript>{ maxPercentage }%</noscript>
-        { visible && percentage }
+      <p className="font-weight-bold display-1">
+        <noscript>
+          <span className={ "imc-" + maxPercentage }>{ maxPercentage }%</span>
+        </noscript>
+        { visible && <span className={ "imc-" + percentage }>{ percentage }%</span> }
       </p>
       <p className="text-muted pb-5">"{ q }"</p>
       <div>
