@@ -1,7 +1,7 @@
 {
-  "name": "infometer-ssr",
-  "version": "0.1.0",
-  "description": "InfoMeter (with server side rendering).",
+  "name": "infometer",
+  "version": "0.2.0",
+  "description": "InfoMeter - Check you info! http://infometer.herokuapp.com",
   "main": "./dist/server/index.js",
   "scripts": {
     "build": "npm run build:components && npm run build:server && npm run scss:compile && npm run build:client",
@@ -14,9 +14,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "npm run build"
   },
-  "keywords": [],
+  "keywords": [
+    "InfoMeter"
+  ],
   "author": "Anton Bahurinsky",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toxa16/infometer.git"
+  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
