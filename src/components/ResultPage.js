@@ -13,15 +13,16 @@ function randomWithSeed(seedStr) {
 }
 
 export default function ResultPage(props) {
-  const q = props.q;
+  const raw = props.location.search || props.location.pathname;
+  //console.log(raw);
 
   return (
     <div>
       <p className="h3">Your info is</p>
       <p className="font-weight-bold text-info display-1">
-        { randomWithSeed(q) }%
+        { `randomWithSeed(q)` }%
       </p>
-      <p className="text-muted pb-5">"{ q }"</p>
+      <p className="text-muted pb-5">"{ `q` }"</p>
       <div>
         <a className="text-info" href="/">Try another info</a>
       </div>

@@ -1,18 +1,23 @@
+import path from 'path';
+import { Url } from 'url';
 import express from 'express';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
+import { ServerLocation } from '@reach/router';
 
 import { htmlFirst, htmlLast } from './html-parts';
 
-import Homepage from '../components/Homepage';
-import ResultPage from '../components/ResultPage';
 import TermsOfService from '../components/TermsOfService';
 import App from '../components/App';
 
 const app = express();
 
+app.use(express.static(path.join(__dirname, '../client')));
+
 app.get('/', (req, res, next) => {
-  req.page = <App />;
+  req.page = <ServerLocation url={ req.url }>
+    <App />
+  </ServerLocation>;
   next();
 });
 
@@ -21,7 +26,10 @@ app.get('/result', (req, res, next) => {
   if (!q) {
     res.redirect('/');
   } else {
-    req.page = <ResultPage q={ q } />;
+    //req.page = <ResultPage q={ q } />;
+    req.page = <ServerLocation url={ req.url }>
+      <App />
+    </ServerLocation>;
     next();
   }
 });
