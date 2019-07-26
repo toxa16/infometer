@@ -7,11 +7,12 @@ import { htmlFirst, htmlLast } from './html-parts';
 import Homepage from '../components/Homepage';
 import ResultPage from '../components/ResultPage';
 import TermsOfService from '../components/TermsOfService';
+import App from '../components/App';
 
 const app = express();
 
 app.get('/', (req, res, next) => {
-  req.page = <Homepage />;
+  req.page = <App />;
   next();
 });
 

@@ -51,5 +51,6 @@ export const htmlLast = `</div>
 </footer>
 </article>
 
+<script src="./index.js"></script>
 </body>
 </html>`;

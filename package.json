@@ -4,7 +4,10 @@
   "description": "InfoMeter (with server side rendering).",
   "main": "./dist/server/index.js",
   "scripts": {
-    "build": "babel ./src --out-dir ./dist",
+    "build": "npm run build:components && npm run build:server && npm run build:client",
+    "build:client": "parcel build ./src/client/index.js --out-dir ./dist/client",
+    "build:components": "babel ./src/components --out-dir ./dist/components",
+    "build:server": "babel ./src/server --out-dir ./dist/server",
     "start": "node ./dist/server/index.js",
     "serve": "nodemon --exec babel-node ./src/server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,7 +22,8 @@
     "@babel/node": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "parcel-bundler": "^1.12.3"
   },
   "dependencies": {
     "express": "^4.17.1",
