@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from '@reach/router';
 import qs from 'query-string';
 
+/**
+ * Seeded random number from 0 to 100.
+ * @param {string} seedStr 
+ */
 function randomWithSeed(seedStr) {
   const str = seedStr.toLowerCase();
   let sum = 0;
@@ -13,6 +18,13 @@ function randomWithSeed(seedStr) {
   return Math.round(pseudoRand * 100);
 }
 
+/**
+ * Loop with delayed iterations.
+ * @param {number} iterations 
+ * @param {number} delay 
+ * @param {Function} callback 
+ * @param {number} i 
+ */
 function delayedLoop(iterations, delay, callback, i = 0) {
   if (iterations === 0) {
     return;
@@ -51,7 +63,7 @@ export default function ResultPage(props) {
       </p>
       <p className="text-muted pb-5">"{ q }"</p>
       <div>
-        <a className="text-info" href="/">Try another info</a>
+        <Link className="text-info" to="/">Try another info</Link>
       </div>
     </div>
   );
