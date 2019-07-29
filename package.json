@@ -1,6 +1,6 @@
 {
   "name": "infometer",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "InfoMeter - Check you info! http://infometer.herokuapp.com",
   "main": "./dist/server/index.js",
   "scripts": {
